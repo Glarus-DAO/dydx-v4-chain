@@ -61,7 +61,7 @@ services:
       com.datadoghq.ad.logs: '[{"source": "indexer", "service": "kafka"}]'
   postgres:
     build:
-      dockerfile: Dockerfile.postgres.remote
+      dockerfile: Dockerfile.postgres.local
     ports:
       - 5435:5432
     environment:
