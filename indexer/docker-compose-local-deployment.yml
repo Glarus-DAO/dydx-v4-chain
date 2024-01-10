@@ -23,7 +23,7 @@ services:
       - DD_AGENT_HOST=datadog-agent
       - DAEMON_HOME=/dydxprotocol/chain/.alice
     volumes:
-      - ../mainnet:/dydxprotocol/chain/
+      -  /home/dydx/chain:/dydxprotocol/chain/
     ports:
       - "26657:26657"
       - "9090:9090"
@@ -69,7 +69,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       DATADOG_POSTGRES_PASSWORD: dydxserver123
     volumes:
-      - ./data:/var/lib/postgresql/data:Z
+      - /home/dydx/pgdata:/var/lib/postgresql/data:Z
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U dydx_dev"]
       interval: 5s

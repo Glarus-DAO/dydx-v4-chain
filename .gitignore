@@ -1,3 +1,4 @@
+.env
 .gen
 .proto-export
 .proto-export-deps

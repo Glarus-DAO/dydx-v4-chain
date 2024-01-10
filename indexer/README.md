@@ -1,3 +1,5 @@
+ON SERVER REMOVE -m1 tag for indexer docker build
+
 <p align="center"><img src="https://dydx.exchange/icon.svg?" width="256" /></p>
 
 <h1 align="center">v4 Indexer</h1>
