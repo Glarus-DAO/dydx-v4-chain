@@ -3,13 +3,8 @@ services:
   dydxprotocold0:
     image: local:dydxprotocol
     entrypoint:
-      - cosmovisor
       - run
       - start
-      - --log_level
-      # Note that only this validator has a log-level of `info`; other validators use `error` by default.
-      # Change to `debug` for more verbose log-level.
-      - debug
       - --home
       - /dydxprotocol/chain/
       - --indexer-kafka-conn-str
