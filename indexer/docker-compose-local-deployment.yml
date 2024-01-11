@@ -28,11 +28,11 @@ services:
       - "26657:26657"
       - "9099:9090"
       - "1317:1317"
-#    depends_on:
-#      kafka:
-#        condition: service_healthy
-#      postgres-package:
-#        condition: service_completed_successfully
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres-package:
+        condition: service_completed_successfully
   kafka:
     image: blacktop/kafka:2.6
     ports:
@@ -115,6 +115,8 @@ services:
       dockerfile: Dockerfile.postgres-package.remote
     links:
       - postgres
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     depends_on:
       postgres:
         condition: service_healthy
