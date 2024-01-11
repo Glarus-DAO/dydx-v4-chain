@@ -13,7 +13,7 @@ services:
       - --home
       - /dydxprotocol/chain/
       - --indexer-kafka-conn-str
-      - localhost:9092
+      - kafka:9092
       - --bridge-daemon-eth-rpc-endpoint
       - https://eth-mainnet.g.alchemy.com/v2/EmuSFl7uAjtHPBi0dEZmzoSuP3IAZAOY
       - --non-validating-full-node
