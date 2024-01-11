@@ -29,10 +29,8 @@ services:
       - "9099:9090"
       - "1317:1317"
     depends_on:
-      kafka:
+      ender:
         condition: service_healthy
-      postgres-package:
-        condition: service_completed_successfully
   kafka:
     image: blacktop/kafka:2.6
     ports:
