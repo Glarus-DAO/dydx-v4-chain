@@ -27,7 +27,7 @@ export const postgresConfigSchema = {
   DB_PORT: parseInteger({ default: 5435 }),
   DB_NAME: parseString({ default: 'dydx_dev' }),
   DB_USERNAME: parseString({ default: 'dydx_dev' }),
-  DB_PASSWORD: parseString({ default: process.env.POSTGRES_PASSWORD }),
+  DB_PASSWORD: parseString({ default: 'dydxserver123' }),
   PG_POOL_MIN: parseInteger({ default: 1 }),
   PG_POOL_MAX: parseInteger({ default: 2 }),
   PG_ACQUIRE_CONNECTION_TIMEOUT_MS: parseInteger({ default: 10_000 }),

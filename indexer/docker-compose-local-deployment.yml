@@ -116,7 +116,7 @@ services:
     links:
       - postgres
     environment:
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
     depends_on:
       postgres:
         condition: service_healthy
