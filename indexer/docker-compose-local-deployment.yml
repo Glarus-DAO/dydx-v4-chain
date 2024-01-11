@@ -2,9 +2,7 @@ version: '3'
 services:
   dydxprotocold0:
     image: local:dydxprotocol
-    entrypoint:
-      - cosmovisor
-      - run
+    command:
       - start
       - --log_level
       # Note that only this validator has a log-level of `info`; other validators use `error` by default.
