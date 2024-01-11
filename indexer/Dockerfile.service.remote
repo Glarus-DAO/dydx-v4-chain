@@ -42,7 +42,6 @@ COPY ./scripts/container-run.sh /home/dydx/app/services/$service/scripts/
 RUN chown dydx -R /home/dydx/app
 
 # Install npm modules using pnpm
-npm i typescript -g
 RUN pnpm i --loglevel warn --production --frozen-lockfile
 
 USER dydx
