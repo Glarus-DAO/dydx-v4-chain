@@ -21,7 +21,7 @@ services:
       -  /home/dydx/chain:/dydxprotocol/chain/
     ports:
       - "26657:26657"
-      - "9090:9090"
+      - "9099:9090"
       - "1317:1317"
 #    depends_on:
 #      kafka:
