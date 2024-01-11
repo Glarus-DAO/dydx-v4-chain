@@ -30,7 +30,7 @@ services:
       - "1317:1317"
     depends_on:
       ender:
-        condition: service_healthy
+        condition: service_started
   kafka:
     image: blacktop/kafka:2.6
     ports:
